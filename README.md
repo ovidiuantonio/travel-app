@@ -2,10 +2,10 @@
 
 Our scope is to give you some info about your desired tirp, like the weather, the country currency etc.
 
-### How to get the app
+## How to get the app
 
-# Clone or download the project on your computer
-# Open the terminal, cd in the project folder and run the following commands: 
+### Clone or download the project on your computer
+### Open the terminal, cd in the project folder and run the following commands: 
 
 ```markdown
 - **npm i**  (to install all the packages)
@@ -15,13 +15,13 @@ Our scope is to give you some info about your desired tirp, like the weather, th
 - Enter a **city** and a **date**!
 ```
 
-### How to run the tests:
+## How to run the tests:
 
 ```markdown
 - npm run test   (this will run 3 tests, 2 for the app.js and 1 for the server.js)
 **Make sure the server is running to pass the server test!**
 ```
 
-### Have any ideas? Modify the code in the way you think it's better and make a pull request**
+## Have any ideas? Modify the code in the way you think it's better and make a pull request**
 
 
