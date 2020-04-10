@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+## Welcome to TAROM Airlines Travel Application
 
-You can use the [editor on GitHub](https://github.com/ovidiuantonio/travel-app/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Our scope is to give you some info about your desired tirp, like the weather, the country currency etc.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### How to get the app
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Clone or download the project on your computer
+# Open the terminal, cd in the project folder and run the following commands: 
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- **npm i**  (to install all the packages)
+- **npm run build-prod**   (to create the dist folder)
+- **npm run start**   (to start the server)
+- open your browser and open **localhost:3000** in new tab
+- Enter a **city** and a **date**!
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### How to run the tests:
 
-### Jekyll Themes
+```markdown
+- npm run test   (this will run 3 tests, 2 for the app.js and 1 for the server.js)
+**Make sure the server is running to pass the server test!**
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ovidiuantonio/travel-app/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Have any ideas? Modify the code in the way you think it's better and make a pull request**
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
