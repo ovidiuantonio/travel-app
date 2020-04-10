@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(46, 46, 46);
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 20vh 65vh;
+  gap: 2rem;
+
+  .headline {
+    align-items: center;
+    font-size: 2rem;
+    padding-left: 2rem;
+
+    h1 {
+      color: rgb(15, 96, 189);
+    }
+
+    p {
+      color: rgb(242, 252, 106);
+    }
+  }
+
+  .trip {
+    display: grid;
+    grid-template-columns: repeat(2, 40vw);
+    gap: 5vw;
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    justify-content: center;
+    align-items: center;
+
+    .data {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: rgb(15, 96, 189);
+
+      input {
+        font-size: 2.5rem;
+        padding: 0.5rem 0;
+        transform: translateY(-5%);
+        width: 30rem;
+        text-transform: inherit;
+        border: 0;
+        background-color: #eee;
+
+        &:hover {
+          color: rgb(242, 252, 106);
+        }
+
+        &:hover::placeholder {
+          color: rgb(242, 252, 106);
+        }
+      }
+
+      button {
+        text-align: center;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        background-color: #eee;
+        border: 2px solid #ddd;
+        transform: translateY(-5%);
+
+        &:hover {
+          color: rgb(242, 252, 106);
+          background-color: rgb(15, 96, 189);
+        }
+      }
+    }
+  }
+}
+
+#results {
+  padding: 1rem 0;
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .trip {
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 1fr;
+  }
+}
