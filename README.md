@@ -22,6 +22,6 @@ Our scope is to give you some info about your desired tirp, like the weather, th
 **Make sure the server is running to pass the server test!**
 ```
 
-## Have any ideas? Modify the code in the way you think it's better and make a pull request**
+## Have any ideas? Modify the code in the way you think it's better and make a pull request
 
 
