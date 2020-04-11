@@ -22,6 +22,12 @@ Our scope is to give you some info about your desired tirp, like the weather, th
 **Make sure the server is running to pass the server test!**
 ```
 
+## What extra features I added:
+
+- Displayed the length of trip
+- Pull an image for the country
+- Added some extra info about the country where the user wants to go
+
 ## Have any ideas? Modify the code in the way you think it's better and make a pull request
 
 
