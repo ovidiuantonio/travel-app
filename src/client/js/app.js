@@ -40,18 +40,20 @@ function getData() {
     return jsonResponse;
   };
 
-  // const postData = async (data = {}) => {
-  //   const response = await fetch("/", {
-  //     method: "POST",
-  //     credentials: "same-origin",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(data),
-  //   });
-  // };
+  const postData = async (data = {}) => {
+    const response = await fetch("/", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  };
 
-  const updateUI = async (data) => {
+  const updateUI = async () => {
+    const res = await fetch("/trip");
+    const data = await res.json();
     //GETTING THE ELEMENTS I WANT TO MODIFY
 
     const stateData = document.querySelector(".state");
@@ -61,8 +63,8 @@ function getData() {
     const img = document.querySelector(".image img");
     const facts = document.querySelector(".facts");
 
-    stateData.textContent = `${cityInput.value}, ${data.country}`;
-    tempData.textContent = `Min Temperature: ${data.data[2].low_temp}C - Max Temperature: ${data.data[2].max_temp}C`;
+    stateData.textContent = `${data.city}, ${data.country}`;
+    tempData.textContent = `Min Temperature: ${data.min_temp}C - Max Temperature: ${data.max_temp}C`;
     until.textContent = `Days until trip: ${data.daysUntilTrip} days`;
     facts.textContent = `Capital: ${data.capital} - Currency: ${data.currency}`;
     leng.textContent = `3 DAYS ONLY!`;
@@ -70,12 +72,12 @@ function getData() {
 
     //I UPDATE THE IMG SOURCE
 
-    img.setAttribute("src", `${data.photoURL}`);
+    img.setAttribute("src", `${data.image}`);
 
     //IF THERE IS A SOURCE AND IMG DISPLAYS IT WILL BE PERFECT, BUT IF THE IMG SRC IS MISSING THE CUSTOM ERROR MESSAGE
     //WILL APPEAR
 
-    img.setAttribute("alt", `${data.photoError}`);
+    img.setAttribute("alt", `${data.error}`);
   };
 
   const handleClick = async () => {
@@ -141,13 +143,13 @@ function getData() {
 
     console.log(allData);
 
-    // //POST THE DATA
+    //POST THE DATA
 
-    // await postData(allData);
+    await postData(allData);
 
     //UPDATE THE UI
 
-    updateUI(allData);
+    updateUI();
   };
 
   const ele = document.getElementById("generate");
@@ -155,3 +157,4 @@ function getData() {
 }
 
 export { getData };
+export default getData;

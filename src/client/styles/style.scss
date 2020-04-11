@@ -33,17 +33,17 @@ body {
   }
 
   .trip {
-    display: grid;
-    grid-template-columns: repeat(2, 40vw);
-    gap: 5vw;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
 
     .image img {
-      max-width: 100%;
+      max-width: 70%;
       height: auto;
+      margin: auto;
     }
-
-    justify-content: center;
-    align-items: center;
 
     .data {
       font-size: 3rem;
@@ -70,7 +70,7 @@ body {
 
       button {
         text-align: center;
-        padding: 1rem 2rem;
+        padding: 1rem 3rem;
         font-size: 2rem;
         background-color: #eee;
         border: 2px solid #ddd;
@@ -93,9 +93,26 @@ body {
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1025px) {
   .trip {
-    grid-template-columns: 100vw;
-    grid-template-rows: 1fr 1fr;
+    flex-direction: column;
+    padding-top: 10rem;
+    width: 100%;
+    text-align: center;
+
+    .data {
+      padding-top: 4rem;
+
+      button {
+        text-align: left;
+        padding-top: 2rem;
+        width: 50%;
+      }
+    }
+
+    .image img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
