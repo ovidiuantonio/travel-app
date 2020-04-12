@@ -8,6 +8,6 @@ describe('Test, the function "getData()" should exist', () => {
 
 describe('Test, the function "getData()" should be an object', () => {
   test("It should be a function", async () => {
-    expect(typeof getData).toBe("object");
+    expect(typeof getData).toBe("function");
   });
 });

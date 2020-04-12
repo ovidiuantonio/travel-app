@@ -1,4 +1,4 @@
-import { getData } from "./js/app";
+const getData = require("./js/app");
 
 import "./styles/style.scss";
 

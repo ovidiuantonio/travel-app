@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div id="app">
+      <div class="holder headline">
+        <h1>TAROM Airlines</h1>
+        <p>
+          !!! Due to COVID-19 we only accept flights until 30 of April, flights
+          that will last each only 3 days, only inside EUROPE !!!
+        </p>
+      </div>
+      <div class="holder trip">
+        <div class="image">
+          <img
+            src="https://i.insider.com/5d8547db2e22af5bc9096d0d?width=1100&format=jpeg&auto=webp"
+            alt=""
+          />
+        </div>
+        <div class="data">
+          <div class="holder city">
+            <label for="city">My trip to: </label>
+            <input name="city" type="text" id="city" placeholder="City" />
+          </div>
+          <div class="holder date">
+            <label for="date">Departing: </label>
+            <input
+              type="date"
+              id="date"
+              placeholder="enter date here"
+              min="2020-04-10"
+              max="2020-04-30"
+            />
+            <button id="generate" type="submit">Save Trip</button>
+          </div>
+          <div id="results">
+            <p class="state"></p>
+            <p class="temp"></p>
+            <p class="until"></p>
+            <p class="facts"></p>
+            <p class="length"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            });
+        });
+      } else {
+        console.log("Service Working not working");
+      }
+    </script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

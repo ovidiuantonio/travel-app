@@ -156,5 +156,4 @@ function getData() {
   ele.addEventListener("click", handleClick);
 }
 
-export { getData };
-export default getData;
+module.exports = getData;

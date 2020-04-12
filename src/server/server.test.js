@@ -1,8 +1,9 @@
 const request = require("supertest");
+const server = require("./server");
 
-describe("The page should be running", () => {
-  test("Page resonse successfully.", async () => {
-    const response = await request("http://localhost:3000").get("/");
+describe("Test the root path", () => {
+  test("It should response the GET method.", async () => {
+    const response = await request(server).get("/");
     expect(response.statusCode).toBe(200);
   });
 });
