@@ -19,7 +19,7 @@ Our scope is to give you some info about your desired tirp, like the weather, th
 
 ```markdown
 - npm run test   (this will run 3 tests, 2 for the app.js and 1 for the server.js)
-**Make sure the server is running to pass the server test!**
+**Make sure the server is NOT running to pass the server test!**
 ```
 
 ## What extra features I added:
