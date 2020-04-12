@@ -12,6 +12,7 @@ Our scope is to give you some info about your desired tirp, like the weather, th
 - **npm run start**   (to start the server)
 - open your browser and open **localhost:3000** in new tab
 - Enter a **city** and a **date**!
+- NOTE: if your search fails please refresh the website (CTRL + SHIFT + R)
 ```
 
 ## How to run the tests:
