@@ -9,7 +9,6 @@ Our scope is to give you some info about your desired tirp, like the weather, th
 
 ```markdown
 - **npm i**  (to install all the packages)
-- **npm run build-prod**   (to create the dist folder)
 - **npm run start**   (to start the server)
 - open your browser and open **localhost:3000** in new tab
 - Enter a **city** and a **date**!
